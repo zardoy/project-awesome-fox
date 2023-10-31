@@ -1,0 +1,38 @@
+{
+  "name": "project-awesome-fox",
+  "displayName": "Project Awesome Fox",
+  "license": "MIT",
+  "dependencies": {
+    "@vitejs/plugin-vue": "^4.4.0",
+    "eslint-plugin-vue": "^9.18.1",
+    "sass": "^1.69.5",
+    "vite": "^4.5.0",
+    "vue": "^3.3.7",
+    "vue-eslint-parser": "^9.3.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.33",
+    "@types/react-dom": "^18.2.14",
+    "@zardoy/tsconfig": "^1.5.0",
+    "eslint": "^8.52.0",
+    "eslint-config-zardoy": "^0.2.17",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "lint": "eslint src/**"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "proseWrap": "never",
+    "tabWidth": 4,
+    "trailingComma": "all",
+    "arrowParens": "avoid",
+    "printWidth": 160,
+    "endOfLine": "auto"
+  }
+}

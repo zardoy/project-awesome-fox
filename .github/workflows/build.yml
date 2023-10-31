@@ -1,0 +1,25 @@
+name: Deploy to GitHub pages
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: npm i -g pnpm
+      - uses: actions/cache@v1
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+      - run: pnpm install
+      - run: pnpm build
+      # zip files
+      - run: zip -r build.zip dist
+      - name: Attach production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: |
+            build.zip
